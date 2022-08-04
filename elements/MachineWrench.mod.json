@@ -1,0 +1,33 @@
+{
+  "_fv": 28,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "wrenchtexture",
+    "customModelName": "Normal",
+    "name": "Machine Wrench",
+    "specialInfo": [
+      "W.I.P. Tool to interact with Satiscraftory Machines"
+    ],
+    "creativeTab": {
+      "value": "CUSTOM:Satiscraftory"
+    },
+    "toolType": "Special",
+    "harvestLevel": 1,
+    "efficiency": 15.0,
+    "attackSpeed": 1.0,
+    "enchantability": 2,
+    "damageVsEntity": 0.5,
+    "usageCount": 0,
+    "blocksAffected": [
+      {
+        "value": "CUSTOM:NodeMiner"
+      }
+    ],
+    "hasGlow": false,
+    "repairItems": [],
+    "immuneToFire": true,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

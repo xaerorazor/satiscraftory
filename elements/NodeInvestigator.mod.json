@@ -1,0 +1,54 @@
+{
+  "_fv": 28,
+  "_type": "item",
+  "definition": {
+    "renderType": 0,
+    "texture": "nodefinder",
+    "customModelName": "Tool",
+    "name": "Node Investigator",
+    "rarity": "COMMON",
+    "creativeTab": {
+      "value": "CUSTOM:Satiscraftory"
+    },
+    "stackSize": 1,
+    "enchantability": 0,
+    "useDuration": 0,
+    "toolType": 1.0,
+    "damageCount": 0,
+    "recipeRemainder": {
+      "value": ""
+    },
+    "destroyAnyBlock": false,
+    "immuneToFire": true,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "enableMeleeDamage": false,
+    "damageVsEntity": 0.0,
+    "specialInfo": [
+      "W.I.P. Node Investigation"
+    ],
+    "hasGlow": true,
+    "guiBoundTo": "<NONE>",
+    "inventorySize": 9,
+    "inventoryStackSize": 64,
+    "onRightClickedInAir": {
+      "name": "NodeInvestigatorRightclickedOnBlock"
+    },
+    "onRightClickedOnBlock": {
+      "name": "NodeInvestigatorRightclickedOnBlock"
+    },
+    "onEntityHitWith": {
+      "name": "MachineWrenchLivingEntityIsHitWithTool"
+    },
+    "hasDispenseBehavior": false,
+    "isFood": false,
+    "nutritionalValue": 4,
+    "saturation": 0.3,
+    "eatResultItem": {
+      "value": ""
+    },
+    "isMeat": false,
+    "isAlwaysEdible": false,
+    "animation": "block"
+  }
+}

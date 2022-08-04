@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "satiscraftory:block/coal_generator"
+    },
+    "facing=east": {
+      "model": "satiscraftory:block/coal_generator",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "satiscraftory:block/coal_generator",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "satiscraftory:block/coal_generator",
+      "y": 270
+    }
+  }
+}

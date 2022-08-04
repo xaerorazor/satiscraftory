@@ -1,0 +1,26 @@
+modLoader="javafml"
+loaderVersion="[40,)"
+license="GNU General Public License version 3 (GPLv3)"
+
+[[mods]]
+modId="satiscraftory"
+version="0.1.202208031.18.2"
+displayName="Satiscraftory"
+credits="Soaryn,Satisfactory"
+displayURL="https://mcreator.net"
+logoFile="logo.png"
+authors="xaerorazor"
+description='''
+Adding Satisfactory like items to Minecraft
+'''
+
+[[dependencies.satiscraftory]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.18.2]"
+    ordering="NONE"
+    side="BOTH"
+
+
+
+

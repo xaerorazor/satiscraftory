@@ -1,0 +1,23 @@
+{
+  "_fv": 28,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:NodeBase"
+      },
+      {
+        "value": "CUSTOM:NodeForge"
+      },
+      {
+        "value": "CUSTOM:NodeCreative"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "name": "ore_nodes",
+    "namespace": "mod"
+  }
+}

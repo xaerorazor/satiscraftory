@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "satiscraftory:node_creative",
+    "satiscraftory:node_base",
+    "satiscraftory:node_forge"
+  ]
+}

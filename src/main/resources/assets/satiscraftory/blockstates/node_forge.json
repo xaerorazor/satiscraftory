@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "satiscraftory:block/node_forge"
+    },
+    "facing=east": {
+      "model": "satiscraftory:block/node_forge",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "satiscraftory:block/node_forge",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "satiscraftory:block/node_forge",
+      "y": 270
+    }
+  }
+}

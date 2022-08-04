@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "satiscraftory:blocks/nodeside",
+    "up": "satiscraftory:blocks/nodetop",
+    "north": "satiscraftory:blocks/nodeside",
+    "east": "satiscraftory:blocks/nodeside",
+    "south": "satiscraftory:blocks/nodeside",
+    "west": "satiscraftory:blocks/nodeside",
+    "particle": "satiscraftory:blocks/nodeside"
+  }
+}

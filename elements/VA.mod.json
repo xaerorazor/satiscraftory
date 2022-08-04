@@ -1,0 +1,49 @@
+{
+  "_fv": 28,
+  "_type": "fluid",
+  "definition": {
+    "name": "VA",
+    "bucketName": "VA Bucket",
+    "textureStill": "nodeside",
+    "textureFlowing": "nodeside",
+    "tintType": "No tint",
+    "canMultiply": false,
+    "flowRate": 1,
+    "levelDecrease": 3,
+    "slopeFindDistance": 3,
+    "spawnParticles": false,
+    "dripParticle": {
+      "value": "CUSTOM:OreBeacon"
+    },
+    "flowStrength": 1.0,
+    "luminosity": 0,
+    "density": 100000,
+    "viscosity": 100000,
+    "isGas": false,
+    "temperature": 100000,
+    "type": "LAVA",
+    "generateBucket": false,
+    "textureBucket": "",
+    "creativeTab": {
+      "value": "CUSTOM:Satiscraftory"
+    },
+    "emptySound": {
+      "value": ""
+    },
+    "rarity": "EPIC",
+    "specialInfo": [],
+    "resistance": 100.0,
+    "luminance": 0,
+    "lightOpacity": 15,
+    "emissiveRendering": true,
+    "tickRate": 0,
+    "flammability": 0,
+    "fireSpreadSpeed": 0,
+    "colorOnMap": "DEFAULT",
+    "frequencyOnChunks": 5,
+    "spawnWorldTypes": [
+      "Surface"
+    ],
+    "restrictionBiomes": []
+  }
+}

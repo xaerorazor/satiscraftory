@@ -1,0 +1,11 @@
+{
+  "_fv": 28,
+  "_type": "tab",
+  "definition": {
+    "name": "Satiscraftory",
+    "icon": {
+      "value": "CUSTOM:NodeCreative"
+    },
+    "showSearch": false
+  }
+}

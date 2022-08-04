@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "satiscraftory:block/node_creative"
+    },
+    "facing=east": {
+      "model": "satiscraftory:block/node_creative",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "satiscraftory:block/node_creative",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "satiscraftory:block/node_creative",
+      "y": 270
+    }
+  }
+}

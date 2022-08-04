@@ -1,0 +1,12 @@
+{
+  "_fv": 28,
+  "_type": "gamerule",
+  "definition": {
+    "type": "Number",
+    "displayName": "oreupdateticks",
+    "description": "How Often a Tier 1 node spawns an ore",
+    "category": "MISC",
+    "defaultValueLogic": false,
+    "defaultValueNumber": 40
+  }
+}

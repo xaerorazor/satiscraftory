@@ -1,0 +1,1117 @@
+{
+  "mod_elements": [
+    {
+      "name": "NodeBase",
+      "type": "block",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "node_base",
+      "path": "~/Nodes"
+    },
+    {
+      "name": "NodeBaseBlockValidPlacementCondition",
+      "type": "procedure",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "node_base_block_valid_placement_condition",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Nodes"
+    },
+    {
+      "name": "NodeBaseBlockAdded",
+      "type": "procedure",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "node_base_block_added",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Nodes"
+    },
+    {
+      "name": "NodeBaseOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "node_base_on_block_right_clicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Nodes"
+    },
+    {
+      "name": "NodeBaseUpdateTick",
+      "type": "procedure",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "node_base_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Nodes"
+    },
+    {
+      "name": "AmathestBlockToShard",
+      "type": "recipe",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "amathest_block_to_shard",
+      "path": "~/AdditionalRecipes"
+    },
+    {
+      "name": "NodeInvestigator",
+      "type": "item",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "node_investigator",
+      "path": "~/Tools"
+    },
+    {
+      "name": "Satiscraftory",
+      "type": "tab",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "satiscraftory"
+    },
+    {
+      "name": "NodeInvestigatorRightclickedOnBlock",
+      "type": "procedure",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "node_investigator_rightclicked_on_block",
+      "metadata": {
+        "return_type": "actionresulttype",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Tools"
+    },
+    {
+      "name": "CreateNodeCommandExecuted",
+      "type": "procedure",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "create_node_command_executed",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "cmdparams",
+            "type": "map"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Nodes"
+    },
+    {
+      "name": "NodeForge",
+      "type": "block",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "node_forge",
+      "path": "~/Nodes"
+    },
+    {
+      "name": "NodeForgeBlockAdded",
+      "type": "procedure",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "node_forge_block_added",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Nodes"
+    },
+    {
+      "name": "NodeForgeUpdateTick",
+      "type": "procedure",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "node_forge_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Nodes"
+    },
+    {
+      "name": "GetVanillaOre",
+      "type": "procedure",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_vanilla_ore",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GetForgeOre",
+      "type": "procedure",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_forge_ore",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GetInternalSpawn",
+      "type": "procedure",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_internal_spawn",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GetDebug",
+      "type": "procedure",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_debug",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GetRefil",
+      "type": "procedure",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_refil",
+      "metadata": {
+        "return_type": "number",
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "NodeFinderMakeItemGlow",
+      "type": "procedure",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "node_finder_make_item_glow",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Tools"
+    },
+    {
+      "name": "NodeFinder",
+      "type": "item",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "node_finder",
+      "path": "~/Tools"
+    },
+    {
+      "name": "NodeFinderRightclicked",
+      "type": "procedure",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "node_finder_rightclicked",
+      "metadata": {
+        "return_type": "actionresulttype",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Tools"
+    },
+    {
+      "name": "NodeFinderItemInHandTick",
+      "type": "procedure",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "node_finder_item_in_hand_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Tools"
+    },
+    {
+      "name": "NodeFinderItemIsCraftedsmelted",
+      "type": "procedure",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "node_finder_item_is_craftedsmelted",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Tools"
+    },
+    {
+      "name": "NodeFinderItemIsDroppedByPlayer",
+      "type": "procedure",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "node_finder_item_is_dropped_by_player",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Tools"
+    },
+    {
+      "name": "GetBlockBeacon",
+      "type": "procedure",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_block_beacon",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "VanillaOre",
+      "type": "tag",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vanilla_ore",
+      "path": "~/Nodes"
+    },
+    {
+      "name": "OreNodes",
+      "type": "tag",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ore_nodes",
+      "path": "~/Nodes"
+    },
+    {
+      "name": "NodeFinderEntitySwingsItem",
+      "type": "procedure",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "node_finder_entity_swings_item",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Tools"
+    },
+    {
+      "name": "NodeFinderItemInInventoryTick",
+      "type": "procedure",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "node_finder_item_in_inventory_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Tools"
+    },
+    {
+      "name": "PunchingNodes",
+      "type": "achievement",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "punching_nodes",
+      "path": "~/Nodes"
+    },
+    {
+      "name": "PlayerPunchesNode",
+      "type": "procedure",
+      "sortid": 37,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "player_punches_node",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Nodes"
+    },
+    {
+      "name": "LookingForMore",
+      "type": "achievement",
+      "sortid": 38,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "looking_for_more",
+      "path": "~/Nodes"
+    },
+    {
+      "name": "OreBeacon",
+      "type": "particle",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ore_beacon",
+      "path": "~/Nodes"
+    },
+    {
+      "name": "NodeGui",
+      "type": "gui",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "node_gui",
+      "path": "~/Nodes"
+    },
+    {
+      "name": "NodeCreative",
+      "type": "block",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "node_creative",
+      "path": "~/Nodes"
+    },
+    {
+      "name": "NodeCreativeUpdateTick",
+      "type": "procedure",
+      "sortid": 41,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "node_creative_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Nodes"
+    },
+    {
+      "name": "NodeCreativeGuiSlot0Change",
+      "type": "procedure",
+      "sortid": 42,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "node_creative_gui_slot_0_change",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Nodes"
+    },
+    {
+      "name": "NodeMiner",
+      "type": "block",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "node_miner",
+      "path": "~/Miner"
+    },
+    {
+      "name": "MachineWrench",
+      "type": "tool",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "machine_wrench",
+      "path": "~/Tools"
+    },
+    {
+      "name": "Zooop",
+      "type": "achievement",
+      "sortid": 43,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "zooop",
+      "path": "~/Tools"
+    },
+    {
+      "name": "MachineWrenchEntitySwingsItem",
+      "type": "procedure",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "machine_wrench_entity_swings_item",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Tools"
+    },
+    {
+      "name": "MachineWrenchItemIsCraftedsmelted",
+      "type": "procedure",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "machine_wrench_item_is_craftedsmelted",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Tools"
+    },
+    {
+      "name": "MachineWrenchLivingEntityIsHitWithTool",
+      "type": "procedure",
+      "sortid": 46,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "machine_wrench_living_entity_is_hit_with_tool",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Tools"
+    },
+    {
+      "name": "Machines",
+      "type": "tag",
+      "sortid": 47,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "machines"
+    },
+    {
+      "name": "SSD",
+      "type": "item",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ssd",
+      "path": "~/Tools"
+    },
+    {
+      "name": "CoalGenerator",
+      "type": "block",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coal_generator",
+      "path": "~/Generator"
+    },
+    {
+      "name": "CoalGeneratorParticleSpawningCondition",
+      "type": "procedure",
+      "sortid": 48,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coal_generator_particle_spawning_condition",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Generator"
+    },
+    {
+      "name": "VA",
+      "type": "fluid",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "va",
+      "metadata": {
+        "gb": false
+      }
+    },
+    {
+      "name": "VAAdditionalGenerationCondition",
+      "type": "procedure",
+      "sortid": 49,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "va_additional_generation_condition",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": []
+      }
+    },
+    {
+      "name": "VABlockAdded",
+      "type": "procedure",
+      "sortid": 50,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "va_block_added",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": []
+      }
+    },
+    {
+      "name": "RecipeCoalGenerator",
+      "type": "recipe",
+      "sortid": 51,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "recipe_coal_generator",
+      "path": "~/Generator"
+    },
+    {
+      "name": "CoalGeneratorEntityWalksOnTheBlock",
+      "type": "procedure",
+      "sortid": 52,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coal_generator_entity_walks_on_the_block",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Generator"
+    },
+    {
+      "name": "CoalGeneratorUpdateTick",
+      "type": "procedure",
+      "sortid": 53,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coal_generator_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Generator"
+    },
+    {
+      "name": "PlainNode",
+      "type": "gamerule",
+      "sortid": 54,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "plainNode",
+      "metadata": {
+        "type": "logic"
+      },
+      "path": "~/Nodes"
+    },
+    {
+      "name": "OreUpdateTicks",
+      "type": "gamerule",
+      "sortid": 55,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "oreUpdateTicks",
+      "metadata": {
+        "type": "number"
+      },
+      "path": "~/Nodes"
+    },
+    {
+      "name": "RecipeNodeFinder",
+      "type": "recipe",
+      "sortid": 56,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "recipe_node_finder",
+      "path": "~/Tools"
+    }
+  ],
+  "variable_elements": [
+    {
+      "name": "OreVanilla",
+      "type": "logic",
+      "scope": "map",
+      "value": "true"
+    },
+    {
+      "name": "OreNodeRefillTicks",
+      "type": "number",
+      "scope": "map",
+      "value": "80.0"
+    },
+    {
+      "name": "OreNodeInternalSpawn",
+      "type": "logic",
+      "scope": "map",
+      "value": "true"
+    },
+    {
+      "name": "OreForge",
+      "type": "logic",
+      "scope": "map",
+      "value": "true"
+    },
+    {
+      "name": "DEBUG",
+      "type": "logic",
+      "scope": "map",
+      "value": "true"
+    },
+    {
+      "name": "BlockBeacon",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "AdditionalNodeStructure",
+      "type": "logic",
+      "scope": "map",
+      "value": "true"
+    },
+    {
+      "name": "GlobalVA",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "AvailableVA",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    }
+  ],
+  "sound_elements": [],
+  "language_map": {
+    "en_us": {
+      "advancements.zooop.title": "Zooooooooop",
+      "item.satiscraftory.va_bucket": "VA Bucket",
+      "advancements.looking_for_more.title": "Looking For More",
+      "advancements.punching_nodes.title": "Punching Nodes",
+      "block.satiscraftory.node_creative": "Creative Ore Node",
+      "gamerule.plainNode": "plainnode",
+      "block.satiscraftory.node_base": "Ore Node",
+      "itemGroup.tabsatiscraftory": "Satiscraftory",
+      "block.satiscraftory.coal_generator": "Coal Generator",
+      "item.satiscraftory.node_finder": "Node Finder",
+      "gamerule.plainNode.description": "Generation of Plain or Fancy Ore Nodes",
+      "gamerule.oreUpdateTicks.description": "How Often a Tier 1 node spawns an ore",
+      "block.satiscraftory.node_forge": "Forge Ore Node",
+      "advancements.looking_for_more.descr": "Time to look for more ore nodes",
+      "fluid.satiscraftory.va": "VA",
+      "gamerule.oreUpdateTicks": "oreupdateticks",
+      "block.satiscraftory.va": "VA",
+      "block.satiscraftory.node_miner": "Node Miner",
+      "item.satiscraftory.machine_wrench": "Machine Wrench",
+      "advancements.zooop.descr": "Get the tool to interact with Satiscraftory Machines",
+      "advancements.punching_nodes.descr": "You Punched an Ore Node",
+      "item.satiscraftory.node_investigator": "Node Investigator",
+      "item.satiscraftory.ssd": "SSD"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": [
+      {
+        "name": "Nodes",
+        "children": []
+      },
+      {
+        "name": "AdditionalRecipes",
+        "children": []
+      },
+      {
+        "name": "Miner",
+        "children": []
+      },
+      {
+        "name": "Tools",
+        "children": []
+      },
+      {
+        "name": "MAM",
+        "children": []
+      },
+      {
+        "name": "Generator",
+        "children": []
+      }
+    ]
+  },
+  "workspaceSettings": {
+    "modid": "satiscraftory",
+    "modName": "Satiscraftory",
+    "version": "0.1.20220803_1.18.2",
+    "description": "Adding Satisfactory like items to Minecraft",
+    "author": "xaerorazor",
+    "websiteURL": "https://mcreator.net",
+    "license": "GNU General Public License version 3 (GPLv3)",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "modPicture": "modicon",
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.18.2",
+    "credits": "Soaryn,Satisfactory",
+    "modElementsPackage": "net.satiscraftory",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202200120510
+}

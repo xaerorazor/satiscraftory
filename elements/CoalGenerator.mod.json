@@ -1,0 +1,147 @@
+{
+  "_fv": 28,
+  "_type": "block",
+  "definition": {
+    "texture": "generatorbottom",
+    "textureTop": "generatortop",
+    "textureLeft": "generatorside",
+    "textureFront": "generatorfront",
+    "textureRight": "generatorside",
+    "textureBack": "generatorside",
+    "renderType": 10,
+    "customModelName": "Normal",
+    "rotationMode": 1,
+    "emissiveRendering": false,
+    "displayFluidOverlay": false,
+    "itemTexture": "",
+    "particleTexture": "",
+    "tintType": "No tint",
+    "isItemTinted": false,
+    "hasTransparency": true,
+    "connectedSides": false,
+    "transparencyType": "SOLID",
+    "disableOffset": false,
+    "boundingBoxes": [
+      {
+        "mx": 0.0,
+        "my": 0.0,
+        "mz": 0.0,
+        "Mx": 16.0,
+        "My": 16.0,
+        "Mz": 16.0,
+        "subtract": false
+      }
+    ],
+    "name": "Coal Generator",
+    "specialInfo": [
+      "Creates Power for Machines using Coal/Charcoal"
+    ],
+    "hardness": 1.0,
+    "resistance": 10.0,
+    "hasGravity": true,
+    "isWaterloggable": false,
+    "creativeTab": {
+      "value": "CUSTOM:Satiscraftory"
+    },
+    "destroyTool": "Not specified",
+    "customDrop": {
+      "value": ""
+    },
+    "dropAmount": 1,
+    "useLootTableForDrops": false,
+    "enchantPowerBonus": 0.0,
+    "plantsGrowOn": false,
+    "canRedstoneConnect": false,
+    "lightOpacity": 15,
+    "material": {
+      "value": "IRON"
+    },
+    "tickRate": 20,
+    "tickRandomly": false,
+    "isReplaceable": false,
+    "canProvidePower": false,
+    "emittedRedstonePower": {
+      "fixedValue": 15.0
+    },
+    "colorOnMap": "DEFAULT",
+    "creativePickItem": {
+      "value": ""
+    },
+    "offsetType": "NONE",
+    "aiPathNodeType": "UNPASSABLE_RAIL",
+    "flammability": 0,
+    "fireSpreadSpeed": 0,
+    "isLadder": false,
+    "slipperiness": 0.6,
+    "speedFactor": 1.0,
+    "jumpFactor": 1.0,
+    "reactionToPushing": "NORMAL",
+    "isNotColidable": false,
+    "isCustomSoundType": false,
+    "soundOnStep": {
+      "value": "COPPER"
+    },
+    "breakSound": {
+      "value": ""
+    },
+    "fallSound": {
+      "value": ""
+    },
+    "hitSound": {
+      "value": ""
+    },
+    "placeSound": {
+      "value": ""
+    },
+    "stepSound": {
+      "value": ""
+    },
+    "luminance": 0,
+    "unbreakable": false,
+    "breakHarvestLevel": 0,
+    "spawnParticles": true,
+    "particleToSpawn": {
+      "value": "CAMPFIRE_COSY_SMOKE"
+    },
+    "particleSpawningShape": "Top",
+    "particleSpawningRadious": 0.2,
+    "particleAmount": 5,
+    "particleCondition": {
+      "name": "CoalGeneratorParticleSpawningCondition"
+    },
+    "hasInventory": true,
+    "guiBoundTo": "<NONE>",
+    "openGUIOnRightClick": false,
+    "inventorySize": 2,
+    "inventoryStackSize": 100,
+    "inventoryDropWhenDestroyed": true,
+    "inventoryComparatorPower": true,
+    "inventoryOutSlotIDs": [
+      1
+    ],
+    "inventoryInSlotIDs": [
+      0,
+      1
+    ],
+    "hasEnergyStorage": false,
+    "energyInitial": 0,
+    "energyCapacity": 400000,
+    "energyMaxReceive": 200,
+    "energyMaxExtract": 200,
+    "isFluidTank": true,
+    "fluidCapacity": 10000,
+    "fluidRestrictions": [
+      {
+        "value": "CUSTOM:VA"
+      }
+    ],
+    "spawnWorldTypes": [],
+    "restrictionBiomes": [],
+    "blocksToReplace": [],
+    "generationShape": "UNIFORM",
+    "frequencyPerChunks": 10,
+    "frequencyOnChunk": 16,
+    "minGenerateHeight": 0,
+    "maxGenerateHeight": 64
+  }
+}
