@@ -4,6 +4,7 @@
  */
 package net.satiscraftory.init;
 
+import net.satiscraftory.block.entity.NodeMinerBlockEntity;
 import net.satiscraftory.block.entity.NodeForgeBlockEntity;
 import net.satiscraftory.block.entity.NodeCreativeBlockEntity;
 import net.satiscraftory.block.entity.NodeBaseBlockEntity;
@@ -26,6 +27,8 @@ public class SatiscraftoryModBlockEntities {
 			NodeForgeBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> NODE_CREATIVE = register("node_creative", SatiscraftoryModBlocks.NODE_CREATIVE,
 			NodeCreativeBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> NODE_MINER = register("node_miner", SatiscraftoryModBlocks.NODE_MINER,
+			NodeMinerBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> COAL_GENERATOR = register("coal_generator", SatiscraftoryModBlocks.COAL_GENERATOR,
 			CoalGeneratorBlockEntity::new);
 

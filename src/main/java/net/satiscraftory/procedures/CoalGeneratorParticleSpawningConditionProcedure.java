@@ -10,7 +10,14 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class CoalGeneratorParticleSpawningConditionProcedure {
 	public static boolean execute(LevelAccessor world, double x, double y, double z) {
-		if (0 < new Object() {
+		if (new Object() {
+			public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
+				BlockEntity blockEntity = world.getBlockEntity(pos);
+				if (blockEntity != null)
+					return blockEntity.getTileData().getBoolean(tag);
+				return false;
+			}
+		}.getValue(world, new BlockPos(x, y, z), "Active") && 0 < new Object() {
 			public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 				AtomicInteger _retval = new AtomicInteger(0);
 				BlockEntity _ent = world.getBlockEntity(pos);

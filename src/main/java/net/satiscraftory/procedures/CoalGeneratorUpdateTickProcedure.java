@@ -60,7 +60,7 @@ public class CoalGeneratorUpdateTickProcedure {
 								.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
 					return _retval.get();
 				}
-			}.getAmount(world, new BlockPos(x, y, z), 1)) {
+			}.getAmount(world, new BlockPos(x, y, z), 0)) {
 				if (!world.isClientSide()) {
 					BlockPos _bp = new BlockPos(x, y, z);
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -89,8 +89,7 @@ public class CoalGeneratorUpdateTickProcedure {
 								.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
 					return _retval.get();
 				}
-			}.getAmount(world, new BlockPos(x, y, z), 0)
-					&& (world instanceof Level _lvl_isPow ? _lvl_isPow.hasNeighborSignal(new BlockPos(x, y, z)) : false)) {
+			}.getAmount(world, new BlockPos(x, y, z), 0)) {
 				if (0 == new Object() {
 					public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 						AtomicInteger _retval = new AtomicInteger(0);
@@ -101,6 +100,36 @@ public class CoalGeneratorUpdateTickProcedure {
 						return _retval.get();
 					}
 				}.getAmount(world, new BlockPos(x, y, z), 1)) {
+					{
+						BlockEntity _ent = world.getBlockEntity(new BlockPos(x, y, z));
+						if (_ent != null) {
+							final int _slotid = 0;
+							final ItemStack _setstack = (new Object() {
+								public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
+									AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+									BlockEntity _ent = world.getBlockEntity(pos);
+									if (_ent != null)
+										_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
+												.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
+									return _retval.get();
+								}
+							}.getItemStack(world, new BlockPos(x, y, z), 0));
+							_setstack.setCount((int) (new Object() {
+								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
+									AtomicInteger _retval = new AtomicInteger(0);
+									BlockEntity _ent = world.getBlockEntity(pos);
+									if (_ent != null)
+										_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
+												.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
+									return _retval.get();
+								}
+							}.getAmount(world, new BlockPos(x, y, z), 0) - 1));
+							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+								if (capability instanceof IItemHandlerModifiable)
+									((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _setstack);
+							});
+						}
+					}
 					{
 						BlockEntity _ent = world.getBlockEntity(new BlockPos(x, y, z));
 						if (_ent != null) {
@@ -132,7 +161,7 @@ public class CoalGeneratorUpdateTickProcedure {
 									.ifPresent(capability -> _retval.set(capability.getFluidInTank(tank).getAmount()));
 						return _retval.get();
 					}
-				}.getFluidTankLevel(world, new BlockPos(x, y, z), 1) < new Object() {
+				}.getFluidTankLevel(world, new BlockPos(x, y, z), 0) < new Object() {
 					public int getFluidTankCapacity(LevelAccessor level, BlockPos pos, int tank) {
 						AtomicInteger _retval = new AtomicInteger(0);
 						BlockEntity _ent = level.getBlockEntity(pos);
@@ -141,7 +170,7 @@ public class CoalGeneratorUpdateTickProcedure {
 									.ifPresent(capability -> _retval.set(capability.getTankCapacity(tank)));
 						return _retval.get();
 					}
-				}.getFluidTankCapacity(world, new BlockPos(x, y, z), 1)) {
+				}.getFluidTankCapacity(world, new BlockPos(x, y, z), 0)) {
 					{
 						BlockEntity _ent = world.getBlockEntity(new BlockPos(x, y, z));
 						if (_ent != null) {

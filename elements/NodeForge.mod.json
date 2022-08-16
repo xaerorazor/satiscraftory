@@ -1,5 +1,5 @@
 {
-  "_fv": 28,
+  "_fv": 33,
   "_type": "block",
   "definition": {
     "texture": "nodeside",
@@ -11,6 +11,7 @@
     "renderType": 10,
     "customModelName": "Normal",
     "rotationMode": 1,
+    "enablePitch": false,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
     "itemTexture": "",
@@ -49,6 +50,7 @@
     },
     "dropAmount": 1,
     "useLootTableForDrops": false,
+    "requiresCorrectTool": false,
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": false,
     "canRedstoneConnect": false,
@@ -143,17 +145,227 @@
     "onStartToDestroy": {
       "name": "NodeBaseOnBlockRightClicked"
     },
-    "spawnWorldTypes": [],
-    "restrictionBiomes": [],
+    "spawnWorldTypes": [
+      "Surface"
+    ],
+    "restrictionBiomes": [
+      {
+        "value": "badlands"
+      },
+      {
+        "value": "badlands_plateau"
+      },
+      {
+        "value": "bamboo_jungle"
+      },
+      {
+        "value": "bamboo_jungle_hills"
+      },
+      {
+        "value": "beaches"
+      },
+      {
+        "value": "birch_forest"
+      },
+      {
+        "value": "birch_forest_hills"
+      },
+      {
+        "value": "roofed_forest"
+      },
+      {
+        "value": "mutated_roofed_forest"
+      },
+      {
+        "value": "desert"
+      },
+      {
+        "value": "desert_hills"
+      },
+      {
+        "value": "mutated_mesa"
+      },
+      {
+        "value": "mutated_forest"
+      },
+      {
+        "value": "forest"
+      },
+      {
+        "value": "forest_hills"
+      },
+      {
+        "value": "frozen_peaks"
+      },
+      {
+        "value": "grove"
+      },
+      {
+        "value": "mutated_ice_flats"
+      },
+      {
+        "value": "jagged_peaks"
+      },
+      {
+        "value": "jungle"
+      },
+      {
+        "value": "jungle_hills"
+      },
+      {
+        "value": "meadow"
+      },
+      {
+        "value": "mutated_mesa_clear_rock"
+      },
+      {
+        "value": "mutated_extreme_hills_with_trees"
+      },
+      {
+        "value": "mutated_jungle"
+      },
+      {
+        "value": "mutated_jungle_edge"
+      },
+      {
+        "value": "mutated_mesa_rock"
+      },
+      {
+        "value": "smaller_extreme_hills"
+      },
+      {
+        "value": "mushroom_field_shore"
+      },
+      {
+        "value": "mushroom_fields"
+      },
+      {
+        "value": "mutated_birch_forest"
+      },
+      {
+        "value": "mutated_birch_forest_hills"
+      },
+      {
+        "value": "redwood_taiga"
+      },
+      {
+        "value": "redwood_taiga_hills"
+      },
+      {
+        "value": "mutated_redwood_taiga"
+      },
+      {
+        "value": "mutated_redwood_taiga_hills"
+      },
+      {
+        "value": "plains"
+      },
+      {
+        "value": "savanna"
+      },
+      {
+        "value": "savanna_rock"
+      },
+      {
+        "value": "mutated_savanna_rock"
+      },
+      {
+        "value": "snowy_slopes"
+      },
+      {
+        "value": "cold_beach"
+      },
+      {
+        "value": "snowy_mountains"
+      },
+      {
+        "value": "snowy_tundra"
+      },
+      {
+        "value": "taiga_cold"
+      },
+      {
+        "value": "taiga_cold_hills"
+      },
+      {
+        "value": "mutated_taiga_cold"
+      },
+      {
+        "value": "jungle_edge"
+      },
+      {
+        "value": "stony_peaks"
+      },
+      {
+        "value": "stone_beach"
+      },
+      {
+        "value": "mutated_plains"
+      },
+      {
+        "value": "swamp"
+      },
+      {
+        "value": "mutated_swampland"
+      },
+      {
+        "value": "taiga"
+      },
+      {
+        "value": "taiga_hills"
+      },
+      {
+        "value": "mutated_taiga"
+      },
+      {
+        "value": "warped_forest"
+      },
+      {
+        "value": "extreme_hills_with_trees"
+      },
+      {
+        "value": "mutated_extreme_hills"
+      },
+      {
+        "value": "mountains"
+      },
+      {
+        "value": "mutated_savanna"
+      },
+      {
+        "value": "wooded_badlands_plateau"
+      }
+    ],
     "blocksToReplace": [
       {
         "value": "Blocks.STONE"
+      },
+      {
+        "value": "Blocks.GRASS"
+      },
+      {
+        "value": "Blocks.MYCELIUM"
+      },
+      {
+        "value": "Blocks.DIRT#0"
+      },
+      {
+        "value": "Blocks.DIRT#1"
+      },
+      {
+        "value": "Blocks.DIRT#2"
+      },
+      {
+        "value": "Blocks.ROOTED_DIRT"
       }
     ],
     "generationShape": "UNIFORM",
-    "frequencyPerChunks": 10,
-    "frequencyOnChunk": 16,
+    "frequencyPerChunks": 1,
+    "frequencyOnChunk": 1,
     "minGenerateHeight": 0,
-    "maxGenerateHeight": 64
+    "maxGenerateHeight": 130,
+    "generateCondition": {
+      "name": "NodeBaseBlockValidPlacementCondition"
+    }
   }
 }

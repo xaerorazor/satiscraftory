@@ -14,4 +14,6 @@ public class SatiscraftoryModGameRules {
 			GameRules.BooleanValue.create(true));
 	public static final GameRules.Key<GameRules.IntegerValue> OREUPDATETICKS = GameRules.register("oreUpdateTicks", GameRules.Category.MISC,
 			GameRules.IntegerValue.create(40));
+	public static final GameRules.Key<GameRules.BooleanValue> INTERNALSPAWN = GameRules.register("internalSpawn", GameRules.Category.MISC,
+			GameRules.BooleanValue.create(false));
 }

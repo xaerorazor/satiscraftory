@@ -5,6 +5,7 @@
 package net.satiscraftory.init;
 
 import net.satiscraftory.client.gui.NodeGuiScreen;
+import net.satiscraftory.client.gui.CoalGenGuiScreen;
 
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -19,6 +20,7 @@ public class SatiscraftoryModScreens {
 	public static void clientLoad(FMLClientSetupEvent event) {
 		event.enqueueWork(() -> {
 			MenuScreens.register(SatiscraftoryModMenus.NODE_GUI, NodeGuiScreen::new);
+			MenuScreens.register(SatiscraftoryModMenus.COAL_GEN_GUI, CoalGenGuiScreen::new);
 		});
 	}
 }

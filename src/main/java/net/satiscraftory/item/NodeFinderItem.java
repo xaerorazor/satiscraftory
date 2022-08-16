@@ -25,7 +25,6 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.client.Minecraft;
 
 public class NodeFinderItem extends Item {
 	public NodeFinderItem() {
@@ -45,11 +44,6 @@ public class NodeFinderItem extends Item {
 	@Override
 	@OnlyIn(Dist.CLIENT)
 	public boolean isFoil(ItemStack itemstack) {
-		Player entity = Minecraft.getInstance().player;
-		Level world = entity.level;
-		double x = entity.getX();
-		double y = entity.getY();
-		double z = entity.getZ();
 		return NodeFinderMakeItemGlowProcedure.execute(itemstack);
 	}
 

@@ -1,0 +1,12 @@
+{
+  "_fv": 33,
+  "_type": "gamerule",
+  "definition": {
+    "type": "Logic",
+    "displayName": "internalSpawn",
+    "description": "Determines Internal or External Ore Spawn",
+    "category": "MISC",
+    "defaultValueLogic": false,
+    "defaultValueNumber": 0
+  }
+}

@@ -1,8 +1,8 @@
 package net.satiscraftory.procedures;
 
-import net.satiscraftory.network.SatiscraftoryModVariables;
 import net.satiscraftory.init.SatiscraftoryModParticleTypes;
 import net.satiscraftory.init.SatiscraftoryModItems;
+import net.satiscraftory.init.SatiscraftoryModGameRules;
 
 import net.minecraftforge.items.IItemHandlerModifiable;
 import net.minecraftforge.items.CapabilityItemHandler;
@@ -74,7 +74,7 @@ public class NodeCreativeUpdateTickProcedure {
 				return _retval.get();
 			}
 		}.getItemStack(world, new BlockPos(x, y, z), 0));
-		if (SatiscraftoryModVariables.MapVariables.get(world).OreNodeInternalSpawn == true) {
+		if (world.getLevelData().getGameRules().getBoolean(SatiscraftoryModGameRules.INTERNALSPAWN) == true) {
 			{
 				BlockEntity _ent = world.getBlockEntity(new BlockPos(x, y, z));
 				if (_ent != null) {

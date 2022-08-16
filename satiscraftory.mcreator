@@ -978,6 +978,199 @@
       "locked_code": false,
       "registry_name": "recipe_node_finder",
       "path": "~/Tools"
+    },
+    {
+      "name": "RecipeNodeInvestigator",
+      "type": "recipe",
+      "sortid": 57,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "recipe_node_investigator",
+      "path": "~/Tools"
+    },
+    {
+      "name": "CoalGeneratorBlockAdded",
+      "type": "procedure",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coal_generator_block_added",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Generator"
+    },
+    {
+      "name": "CoalGeneratorBlockDestroyedByPlayer",
+      "type": "procedure",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coal_generator_block_destroyed_by_player",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Generator"
+    },
+    {
+      "name": "CoalGeneratorRedstoneOn",
+      "type": "procedure",
+      "sortid": 60,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coal_generator_redstone_on",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Generator"
+    },
+    {
+      "name": "CoalGeneratorRedstoneOff",
+      "type": "procedure",
+      "sortid": 61,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coal_generator_redstone_off",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Generator"
+    },
+    {
+      "name": "InternalSpawn",
+      "type": "gamerule",
+      "sortid": 62,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "internalSpawn",
+      "metadata": {
+        "type": "logic"
+      },
+      "path": "~/Nodes"
+    },
+    {
+      "name": "CoalGenGui",
+      "type": "gui",
+      "sortid": 63,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coal_gen_gui",
+      "path": "~/Generator"
+    },
+    {
+      "name": "CoalGeneratorOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 64,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coal_generator_on_block_right_clicked",
+      "metadata": {
+        "return_type": "actionresulttype",
+        "dependencies": []
+      },
+      "path": "~/Generator"
+    },
+    {
+      "name": "CoalGenGuiUpdate",
+      "type": "procedure",
+      "sortid": 65,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coal_gen_gui_update",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "guistate",
+            "type": "map"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Generator"
     }
   ],
   "variable_elements": [
@@ -1039,28 +1232,30 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "advancements.zooop.title": "Zooooooooop",
       "item.satiscraftory.va_bucket": "VA Bucket",
+      "gamerule.internalSpawn.description": "Determines Internal or External Ore Spawn",
       "advancements.looking_for_more.title": "Looking For More",
+      "block.satiscraftory.node_base": "Ore Node",
+      "gamerule.plainNode.description": "Generation of Plain or Fancy Ore Nodes",
+      "gamerule.oreUpdateTicks.description": "How Often a Tier 1 node spawns an ore",
+      "advancements.looking_for_more.descr": "Time to look for more ore nodes",
+      "gamerule.oreUpdateTicks": "oreupdateticks",
+      "gamerule.internalSpawn": "internalSpawn",
+      "item.satiscraftory.node_investigator": "Node Investigator",
+      "advancements.zooop.title": "Zooooooooop",
       "advancements.punching_nodes.title": "Punching Nodes",
       "block.satiscraftory.node_creative": "Creative Ore Node",
       "gamerule.plainNode": "plainnode",
-      "block.satiscraftory.node_base": "Ore Node",
       "itemGroup.tabsatiscraftory": "Satiscraftory",
       "block.satiscraftory.coal_generator": "Coal Generator",
       "item.satiscraftory.node_finder": "Node Finder",
-      "gamerule.plainNode.description": "Generation of Plain or Fancy Ore Nodes",
-      "gamerule.oreUpdateTicks.description": "How Often a Tier 1 node spawns an ore",
       "block.satiscraftory.node_forge": "Forge Ore Node",
-      "advancements.looking_for_more.descr": "Time to look for more ore nodes",
       "fluid.satiscraftory.va": "VA",
-      "gamerule.oreUpdateTicks": "oreupdateticks",
       "block.satiscraftory.va": "VA",
       "block.satiscraftory.node_miner": "Node Miner",
       "item.satiscraftory.machine_wrench": "Machine Wrench",
       "advancements.zooop.descr": "Get the tool to interact with Satiscraftory Machines",
       "advancements.punching_nodes.descr": "You Punched an Ore Node",
-      "item.satiscraftory.node_investigator": "Node Investigator",
       "item.satiscraftory.ssd": "SSD"
     }
   },
@@ -1099,7 +1294,7 @@
     "version": "0.1.20220803_1.18.2",
     "description": "Adding Satisfactory like items to Minecraft",
     "author": "xaerorazor",
-    "websiteURL": "https://mcreator.net",
+    "websiteURL": "https://github.com/xaerorazor/satiscraftory",
     "license": "GNU General Public License version 3 (GPLv3)",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
@@ -1113,5 +1308,5 @@
     "modElementsPackage": "net.satiscraftory",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202200120510
+  "mcreatorVersion": 202200233511
 }

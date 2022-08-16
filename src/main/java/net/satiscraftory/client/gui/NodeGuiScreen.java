@@ -33,7 +33,7 @@ public class NodeGuiScreen extends AbstractContainerScreen<NodeGuiMenu> {
 		this.imageHeight = 166;
 	}
 
-	private static final ResourceLocation texture = new ResourceLocation("satiscraftory:textures/node_gui.png");
+	private static final ResourceLocation texture = new ResourceLocation("satiscraftory:textures/screens/node_gui.png");
 
 	@Override
 	public void render(PoseStack ms, int mouseX, int mouseY, float partialTicks) {

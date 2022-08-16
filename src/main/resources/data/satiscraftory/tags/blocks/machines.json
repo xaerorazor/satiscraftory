@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "satiscraftory:node_miner"
+    "satiscraftory:node_miner",
+    "satiscraftory:coal_generator"
   ]
 }
