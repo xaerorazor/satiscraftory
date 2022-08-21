@@ -146,13 +146,13 @@ public class SatiscraftoryModVariables {
 	public static class MapVariables extends SavedData {
 		public static final String DATA_NAME = "satiscraftory_mapvars";
 		public boolean OreVanilla = true;
-		public double OreNodeRefillTicks = 80.0;
-		public boolean OreNodeInternalSpawn = true;
 		public boolean OreForge = true;
 		public boolean DEBUG = true;
 		public boolean AdditionalNodeStructure = true;
 		public double GlobalVA = 0;
 		public double AvailableVA = 0;
+		public double VAStorageBlocks = 0;
+		public double VAUsed = 0;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -162,25 +162,25 @@ public class SatiscraftoryModVariables {
 
 		public void read(CompoundTag nbt) {
 			OreVanilla = nbt.getBoolean("OreVanilla");
-			OreNodeRefillTicks = nbt.getDouble("OreNodeRefillTicks");
-			OreNodeInternalSpawn = nbt.getBoolean("OreNodeInternalSpawn");
 			OreForge = nbt.getBoolean("OreForge");
 			DEBUG = nbt.getBoolean("DEBUG");
 			AdditionalNodeStructure = nbt.getBoolean("AdditionalNodeStructure");
 			GlobalVA = nbt.getDouble("GlobalVA");
 			AvailableVA = nbt.getDouble("AvailableVA");
+			VAStorageBlocks = nbt.getDouble("VAStorageBlocks");
+			VAUsed = nbt.getDouble("VAUsed");
 		}
 
 		@Override
 		public CompoundTag save(CompoundTag nbt) {
 			nbt.putBoolean("OreVanilla", OreVanilla);
-			nbt.putDouble("OreNodeRefillTicks", OreNodeRefillTicks);
-			nbt.putBoolean("OreNodeInternalSpawn", OreNodeInternalSpawn);
 			nbt.putBoolean("OreForge", OreForge);
 			nbt.putBoolean("DEBUG", DEBUG);
 			nbt.putBoolean("AdditionalNodeStructure", AdditionalNodeStructure);
 			nbt.putDouble("GlobalVA", GlobalVA);
 			nbt.putDouble("AvailableVA", AvailableVA);
+			nbt.putDouble("VAStorageBlocks", VAStorageBlocks);
+			nbt.putDouble("VAUsed", VAUsed);
 			return nbt;
 		}
 

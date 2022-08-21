@@ -3,7 +3,7 @@ package net.satiscraftory.procedures;
 import org.spongepowered.asm.util.Counter;
 
 import net.satiscraftory.world.inventory.NodeGuiMenu;
-import net.satiscraftory.network.SatiscraftoryModVariables;
+import net.satiscraftory.init.SatiscraftoryModGameRules;
 import net.satiscraftory.init.SatiscraftoryModBlocks;
 import net.satiscraftory.SatiscraftoryMod;
 
@@ -106,7 +106,7 @@ public class NodeBaseOnBlockRightClickedProcedure {
 			}
 		} else {
 			Itemstoremove = 1;
-			if (SatiscraftoryModVariables.MapVariables.get(world).OreNodeInternalSpawn == true) {
+			if (world.getLevelData().getGameRules().getBoolean(SatiscraftoryModGameRules.INTERNALSPAWN) == true) {
 				Itemstoremove = 1;
 				SatiscraftoryMod.LOGGER.debug((new java.text.DecimalFormat("##.##").format(Itemstoremove)));
 				if (new Object() {
@@ -149,7 +149,7 @@ public class NodeBaseOnBlockRightClickedProcedure {
 						_level.addFreshEntity(entityToSpawn);
 					}
 				}
-			} else if (SatiscraftoryModVariables.MapVariables.get(world).OreNodeInternalSpawn == false) {
+			} else if (world.getLevelData().getGameRules().getBoolean(SatiscraftoryModGameRules.INTERNALSPAWN) == false) {
 				world.scheduleTick(new BlockPos(x, y, z), world.getBlockState(new BlockPos(x, y, z)).getBlock(), 40);
 			}
 		}

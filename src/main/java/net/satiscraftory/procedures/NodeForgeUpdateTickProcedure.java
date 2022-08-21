@@ -114,11 +114,12 @@ public class NodeForgeUpdateTickProcedure {
 					}
 				}
 			}
-		} else {
-			Type = (ItemFound.getItem() instanceof BlockItem _bi ? _bi.getBlock().defaultBlockState() : Blocks.AIR.defaultBlockState());
-			sx = -2;
-			found = false;
-			sy = 1;
+			LocalTickRate = (world.getLevelData().getGameRules().getInt(SatiscraftoryModGameRules.OREUPDATETICKS)) * 2;
+			if (ItemFound.getItem() == Blocks.ANCIENT_DEBRIS.asItem()) {
+				LocalTickRate = LocalTickRate * 8;
+			} else if (ItemFound.getItem() == Items.DIAMOND) {
+				LocalTickRate = LocalTickRate * 4;
+			}
 			for (int index1 = 0; index1 < (int) (new Object() {
 				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 					BlockEntity blockEntity = world.getBlockEntity(pos);
@@ -127,6 +128,23 @@ public class NodeForgeUpdateTickProcedure {
 					return -1;
 				}
 			}.getValue(world, new BlockPos(x, y, z), "Tier")); index1++) {
+				LocalTickRate = Math.ceil(LocalTickRate / 2);
+			}
+			world.scheduleTick(new BlockPos(x, y, z), world.getBlockState(new BlockPos(x, y, z)).getBlock(), (int) LocalTickRate);
+		} else {
+			Type = (ItemFound.getItem() instanceof BlockItem _bi ? _bi.getBlock().defaultBlockState() : Blocks.AIR.defaultBlockState());
+			sx = 0;
+			found = false;
+			sz = 0;
+			sy = 1;
+			for (int index2 = 0; index2 < (int) (new Object() {
+				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+					BlockEntity blockEntity = world.getBlockEntity(pos);
+					if (blockEntity != null)
+						return blockEntity.getTileData().getDouble(tag);
+					return -1;
+				}
+			}.getValue(world, new BlockPos(x, y, z), "Tier")); index2++) {
 				if ((world.getBlockState(new BlockPos(x + sx, y + sy, z + sz))).getBlock() == Type.getBlock()) {
 					found = true;
 				}
@@ -134,14 +152,14 @@ public class NodeForgeUpdateTickProcedure {
 			}
 			if (found == false) {
 				sy = 1;
-				for (int index2 = 0; index2 < (int) (new Object() {
+				for (int index3 = 0; index3 < (int) (new Object() {
 					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 						BlockEntity blockEntity = world.getBlockEntity(pos);
 						if (blockEntity != null)
 							return blockEntity.getTileData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(world, new BlockPos(x, y, z), "Tier")); index2++) {
+				}.getValue(world, new BlockPos(x, y, z), "Tier")); index3++) {
 					{
 						BlockPos _bp = new BlockPos(x + sx, y + sy, z + sz);
 						BlockState _bs = Type;
@@ -159,23 +177,26 @@ public class NodeForgeUpdateTickProcedure {
 					sy = sy + 1;
 				}
 			}
-		}
-		LocalTickRate = (world.getLevelData().getGameRules().getInt(SatiscraftoryModGameRules.OREUPDATETICKS)) * 2;
-		if (ItemFound.getItem() == Blocks.ANCIENT_DEBRIS.asItem()) {
-			LocalTickRate = LocalTickRate * 8;
-		} else if (ItemFound.getItem() == Items.DIAMOND) {
-			LocalTickRate = LocalTickRate * 4;
-		}
-		for (int index3 = 0; index3 < (int) (new Object() {
-			public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getTileData().getDouble(tag);
-				return -1;
+			LocalTickRate = (world.getLevelData().getGameRules().getInt(SatiscraftoryModGameRules.OREUPDATETICKS)) * 3;
+			LocalTickRate = Math.ceil(LocalTickRate / 8);
+			if (ItemFound.getItem() == Blocks.ANCIENT_DEBRIS.asItem()) {
+				LocalTickRate = LocalTickRate * 3;
+				LocalTickRate = LocalTickRate * 8;
+			} else if (ItemFound.getItem() == Items.DIAMOND) {
+				LocalTickRate = LocalTickRate * 3;
+				LocalTickRate = LocalTickRate * 4;
 			}
-		}.getValue(world, new BlockPos(x, y, z), "Tier")); index3++) {
-			LocalTickRate = Math.ceil(LocalTickRate / 2);
+			for (int index4 = 0; index4 < (int) (new Object() {
+				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+					BlockEntity blockEntity = world.getBlockEntity(pos);
+					if (blockEntity != null)
+						return blockEntity.getTileData().getDouble(tag);
+					return -1;
+				}
+			}.getValue(world, new BlockPos(x, y, z), "Tier")); index4++) {
+				LocalTickRate = Math.ceil(LocalTickRate / 2);
+			}
+			world.scheduleTick(new BlockPos(x, y, z), world.getBlockState(new BlockPos(x, y, z)).getBlock(), (int) LocalTickRate);
 		}
-		world.scheduleTick(new BlockPos(x, y, z), world.getBlockState(new BlockPos(x, y, z)).getBlock(), (int) LocalTickRate);
 	}
 }

@@ -1,6 +1,7 @@
 package net.satiscraftory.procedures;
 
 import net.satiscraftory.network.SatiscraftoryModVariables;
+import net.satiscraftory.init.SatiscraftoryModGameRules;
 import net.satiscraftory.SatiscraftoryMod;
 
 import net.minecraftforge.items.IItemHandlerModifiable;
@@ -148,8 +149,8 @@ public class NodeBaseBlockAddedProcedure {
 					}
 				}.getValue(world, new BlockPos(x, y, z), "Tier"))));
 			}
-			if (SatiscraftoryModVariables.MapVariables.get(world).OreNodeInternalSpawn == true) {
-				LoopA = 1;
+			if (world.getLevelData().getGameRules().getBoolean(SatiscraftoryModGameRules.INTERNALSPAWN) == true) {
+				LoopA = 0;
 				for (int index1 = 0; index1 < (int) (1); index1++) {
 					{
 						BlockEntity _ent = world.getBlockEntity(new BlockPos(x, y, z));
@@ -164,7 +165,7 @@ public class NodeBaseBlockAddedProcedure {
 						}
 					}
 				}
-			} else if (SatiscraftoryModVariables.MapVariables.get(world).OreNodeInternalSpawn == false) {
+			} else if (world.getLevelData().getGameRules().getBoolean(SatiscraftoryModGameRules.INTERNALSPAWN) == false) {
 				sx = -2;
 				for (int index2 = 0; index2 < (int) (5); index2++) {
 					sy = 1;

@@ -25,5 +25,7 @@ public class CoalGeneratorBlockDestroyedByPlayerProcedure {
 			}
 		}.getFluidTankLevel(world, new BlockPos(x, y, z), 1);
 		SatiscraftoryModVariables.MapVariables.get(world).syncData(world);
+		SatiscraftoryModVariables.MapVariables.get(world).VAStorageBlocks = SatiscraftoryModVariables.MapVariables.get(world).VAStorageBlocks - 1;
+		SatiscraftoryModVariables.MapVariables.get(world).syncData(world);
 	}
 }

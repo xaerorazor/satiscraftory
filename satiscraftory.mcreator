@@ -330,23 +330,6 @@
       }
     },
     {
-      "name": "GetInternalSpawn",
-      "type": "procedure",
-      "sortid": 23,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "get_internal_spawn",
-      "metadata": {
-        "return_type": "logic",
-        "dependencies": [
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
       "name": "GetDebug",
       "type": "procedure",
       "sortid": 24,
@@ -355,23 +338,6 @@
       "registry_name": "get_debug",
       "metadata": {
         "return_type": "logic",
-        "dependencies": [
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "GetRefil",
-      "type": "procedure",
-      "sortid": 25,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "get_refil",
-      "metadata": {
-        "return_type": "number",
         "dependencies": [
           {
             "name": "world",
@@ -1171,23 +1137,33 @@
         ]
       },
       "path": "~/Generator"
+    },
+    {
+      "name": "NodeInvestigatorEntitySwingsItem",
+      "type": "procedure",
+      "sortid": 66,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "node_investigator_entity_swings_item",
+      "metadata": {
+        "return_type": "actionresulttype",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Tools"
     }
   ],
   "variable_elements": [
     {
       "name": "OreVanilla",
-      "type": "logic",
-      "scope": "map",
-      "value": "true"
-    },
-    {
-      "name": "OreNodeRefillTicks",
-      "type": "number",
-      "scope": "map",
-      "value": "80.0"
-    },
-    {
-      "name": "OreNodeInternalSpawn",
       "type": "logic",
       "scope": "map",
       "value": "true"
@@ -1224,6 +1200,18 @@
     },
     {
       "name": "AvailableVA",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "VAStorageBlocks",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "VAUsed",
       "type": "number",
       "scope": "map",
       "value": "0"

@@ -10,16 +10,22 @@ import net.minecraft.core.BlockPos;
 
 public class CoalGeneratorBlockAddedProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
+		if (SatiscraftoryModVariables.MapVariables.get(world).VAStorageBlocks < 0) {
+			SatiscraftoryModVariables.MapVariables.get(world).VAStorageBlocks = 0;
+			SatiscraftoryModVariables.MapVariables.get(world).syncData(world);
+		}
 		if (!world.isClientSide()) {
 			BlockPos _bp = new BlockPos(x, y, z);
 			BlockEntity _blockEntity = world.getBlockEntity(_bp);
 			BlockState _bs = world.getBlockState(_bp);
 			if (_blockEntity != null)
-				_blockEntity.getTileData().putBoolean("Active", (false));
+				_blockEntity.getTileData().putBoolean("Active", (true));
 			if (world instanceof Level _level)
 				_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 		}
 		SatiscraftoryModVariables.MapVariables.get(world).GlobalVA = SatiscraftoryModVariables.MapVariables.get(world).GlobalVA + 10000;
+		SatiscraftoryModVariables.MapVariables.get(world).syncData(world);
+		SatiscraftoryModVariables.MapVariables.get(world).VAStorageBlocks = SatiscraftoryModVariables.MapVariables.get(world).VAStorageBlocks + 1;
 		SatiscraftoryModVariables.MapVariables.get(world).syncData(world);
 	}
 }
