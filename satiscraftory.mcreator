@@ -18,24 +18,7 @@
       "registry_name": "node_base_block_valid_placement_condition",
       "metadata": {
         "return_type": "logic",
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Nodes"
     },
@@ -1279,7 +1262,7 @@
   "workspaceSettings": {
     "modid": "satiscraftory",
     "modName": "Satiscraftory",
-    "version": "0.1.20220803_1.18.2",
+    "version": "0.1.20220820_1.18.2",
     "description": "Adding Satisfactory like items to Minecraft",
     "author": "xaerorazor",
     "websiteURL": "https://github.com/xaerorazor/satiscraftory",

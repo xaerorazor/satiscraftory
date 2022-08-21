@@ -5,6 +5,7 @@
 package net.satiscraftory.init;
 
 import net.satiscraftory.world.features.ores.NodeForgeFeature;
+import net.satiscraftory.world.features.ores.NodeBaseFeature;
 import net.satiscraftory.world.features.lakes.VAFeature;
 import net.satiscraftory.SatiscraftoryMod;
 
@@ -30,6 +31,8 @@ import java.util.ArrayList;
 public class SatiscraftoryModFeatures {
 	public static final DeferredRegister<Feature<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.FEATURES, SatiscraftoryMod.MODID);
 	private static final List<FeatureRegistration> FEATURE_REGISTRATIONS = new ArrayList<>();
+	public static final RegistryObject<Feature<?>> NODE_BASE = register("node_base", NodeBaseFeature::feature,
+			new FeatureRegistration(GenerationStep.Decoration.UNDERGROUND_ORES, NodeBaseFeature.GENERATE_BIOMES, NodeBaseFeature::placedFeature));
 	public static final RegistryObject<Feature<?>> NODE_FORGE = register("node_forge", NodeForgeFeature::feature,
 			new FeatureRegistration(GenerationStep.Decoration.UNDERGROUND_ORES, NodeForgeFeature.GENERATE_BIOMES, NodeForgeFeature::placedFeature));
 	public static final RegistryObject<Feature<?>> VA = register("va", VAFeature::feature,

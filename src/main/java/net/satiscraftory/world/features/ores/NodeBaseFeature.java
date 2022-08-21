@@ -36,16 +36,16 @@ import java.util.Set;
 import java.util.Random;
 import java.util.List;
 
-public class NodeForgeFeature extends OreFeature {
-	public static NodeForgeFeature FEATURE = null;
+public class NodeBaseFeature extends OreFeature {
+	public static NodeBaseFeature FEATURE = null;
 	public static Holder<ConfiguredFeature<OreConfiguration, ?>> CONFIGURED_FEATURE = null;
 	public static Holder<PlacedFeature> PLACED_FEATURE = null;
 
 	public static Feature<?> feature() {
-		FEATURE = new NodeForgeFeature();
-		CONFIGURED_FEATURE = FeatureUtils.register("satiscraftory:node_forge", FEATURE,
-				new OreConfiguration(NodeForgeFeatureRuleTest.INSTANCE, SatiscraftoryModBlocks.NODE_FORGE.get().defaultBlockState(), 1));
-		PLACED_FEATURE = PlacementUtils.register("satiscraftory:node_forge", CONFIGURED_FEATURE,
+		FEATURE = new NodeBaseFeature();
+		CONFIGURED_FEATURE = FeatureUtils.register("satiscraftory:node_base", FEATURE,
+				new OreConfiguration(NodeBaseFeatureRuleTest.INSTANCE, SatiscraftoryModBlocks.NODE_BASE.get().defaultBlockState(), 1));
+		PLACED_FEATURE = PlacementUtils.register("satiscraftory:node_base", CONFIGURED_FEATURE,
 				List.of(CountPlacement.of(1), InSquarePlacement.spread(),
 						HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(130)), BiomeFilter.biome()));
 		return FEATURE;
@@ -58,7 +58,7 @@ public class NodeForgeFeature extends OreFeature {
 	public static final Set<ResourceLocation> GENERATE_BIOMES = null;
 	private final Set<ResourceKey<Level>> generate_dimensions = Set.of(Level.OVERWORLD);
 
-	public NodeForgeFeature() {
+	public NodeBaseFeature() {
 		super(OreConfiguration.CODEC);
 	}
 
@@ -70,22 +70,21 @@ public class NodeForgeFeature extends OreFeature {
 	}
 
 	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-	private static class NodeForgeFeatureRuleTest extends RuleTest {
-		static final NodeForgeFeatureRuleTest INSTANCE = new NodeForgeFeatureRuleTest();
-		private static final com.mojang.serialization.Codec<NodeForgeFeatureRuleTest> CODEC = com.mojang.serialization.Codec.unit(() -> INSTANCE);
-		private static final RuleTestType<NodeForgeFeatureRuleTest> CUSTOM_MATCH = () -> CODEC;
+	private static class NodeBaseFeatureRuleTest extends RuleTest {
+		static final NodeBaseFeatureRuleTest INSTANCE = new NodeBaseFeatureRuleTest();
+		private static final com.mojang.serialization.Codec<NodeBaseFeatureRuleTest> CODEC = com.mojang.serialization.Codec.unit(() -> INSTANCE);
+		private static final RuleTestType<NodeBaseFeatureRuleTest> CUSTOM_MATCH = () -> CODEC;
 
 		@SubscribeEvent
 		public static void init(FMLCommonSetupEvent event) {
-			Registry.register(Registry.RULE_TEST, new ResourceLocation("satiscraftory:node_forge_match"), CUSTOM_MATCH);
+			Registry.register(Registry.RULE_TEST, new ResourceLocation("satiscraftory:node_base_match"), CUSTOM_MATCH);
 		}
 
 		private List<Block> base_blocks = null;
 
 		public boolean test(BlockState blockAt, Random random) {
 			if (base_blocks == null) {
-				base_blocks = List.of(Blocks.STONE, Blocks.GRASS_BLOCK, Blocks.MYCELIUM, Blocks.DIRT, Blocks.COARSE_DIRT, Blocks.PODZOL,
-						Blocks.ROOTED_DIRT);
+				base_blocks = List.of(Blocks.STONE);
 			}
 			return base_blocks.contains(blockAt.getBlock());
 		}

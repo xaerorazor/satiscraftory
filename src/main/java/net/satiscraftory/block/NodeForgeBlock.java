@@ -92,7 +92,7 @@ public class NodeForgeBlock extends Block
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
-			return NodeBaseBlockValidPlacementConditionProcedure.execute(world, x, y, z);
+			return NodeBaseBlockValidPlacementConditionProcedure.execute();
 		}
 		return super.canSurvive(blockstate, worldIn, pos);
 	}
