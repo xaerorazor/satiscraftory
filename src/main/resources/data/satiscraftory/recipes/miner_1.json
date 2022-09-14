@@ -1,0 +1,39 @@
+{
+  "group": "machines",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "6 8"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:redstone_torch"
+    },
+    "1": {
+      "item": "minecraft:iron_trapdoor"
+    },
+    "2": {
+      "item": "minecraft:chest"
+    },
+    "3": {
+      "item": "minecraft:iron_bars"
+    },
+    "4": {
+      "item": "minecraft:redstone_block"
+    },
+    "5": {
+      "item": "minecraft:iron_bars"
+    },
+    "6": {
+      "item": "minecraft:iron_bars"
+    },
+    "8": {
+      "item": "minecraft:iron_bars"
+    }
+  },
+  "result": {
+    "item": "satiscraftory:node_miner",
+    "count": 1
+  }
+}

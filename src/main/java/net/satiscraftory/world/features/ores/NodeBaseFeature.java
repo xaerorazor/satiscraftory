@@ -84,7 +84,8 @@ public class NodeBaseFeature extends OreFeature {
 
 		public boolean test(BlockState blockAt, Random random) {
 			if (base_blocks == null) {
-				base_blocks = List.of(Blocks.STONE);
+				base_blocks = List.of(Blocks.STONE, Blocks.AIR, Blocks.VOID_AIR, Blocks.CAVE_AIR, Blocks.GRASS_BLOCK, Blocks.DIRT_PATH,
+						Blocks.MYCELIUM, Blocks.DIRT, Blocks.COARSE_DIRT, Blocks.ROOTED_DIRT, Blocks.SAND, Blocks.RED_SAND, Blocks.GRAVEL);
 			}
 			return base_blocks.contains(blockAt.getBlock());
 		}

@@ -85,7 +85,7 @@ public class NodeForgeFeature extends OreFeature {
 		public boolean test(BlockState blockAt, Random random) {
 			if (base_blocks == null) {
 				base_blocks = List.of(Blocks.STONE, Blocks.GRASS_BLOCK, Blocks.MYCELIUM, Blocks.DIRT, Blocks.COARSE_DIRT, Blocks.PODZOL,
-						Blocks.ROOTED_DIRT);
+						Blocks.ROOTED_DIRT, Blocks.AIR, Blocks.VOID_AIR, Blocks.CAVE_AIR);
 			}
 			return base_blocks.contains(blockAt.getBlock());
 		}

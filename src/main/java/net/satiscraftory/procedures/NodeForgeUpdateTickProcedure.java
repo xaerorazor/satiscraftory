@@ -32,7 +32,7 @@ import java.util.Comparator;
 import java.lang.reflect.Type;
 
 public class NodeForgeUpdateTickProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z) {
+	public static boolean execute(LevelAccessor world, double x, double y, double z) {
 		boolean found = false;
 		BlockState Type = Blocks.AIR.defaultBlockState();
 		ItemStack ItemFound = ItemStack.EMPTY;
@@ -42,6 +42,20 @@ public class NodeForgeUpdateTickProcedure {
 		double sz = 0;
 		double LocalTickRate = 0;
 		double Radius = 0;
+		if ((new Object() {
+			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
+				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+				BlockEntity _ent = world.getBlockEntity(pos);
+				if (_ent != null)
+					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
+							.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
+				return _retval.get();
+			}
+		}.getItemStack(world, new BlockPos(x, y, z), 0)).getItem() == Blocks.AIR.asItem()) {
+			NodeForgeBlockAddedProcedure.execute(world, x, y, z);
+			world.scheduleTick(new BlockPos(x, y, z), world.getBlockState(new BlockPos(x, y, z)).getBlock(), 1);
+			return false;
+		}
 		if (!world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 128, 128, 128), e -> true).isEmpty()) {
 			LocalEntity = (Entity) world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 128, 128, 128), e -> true).stream()
 					.sorted(new Object() {
@@ -198,5 +212,6 @@ public class NodeForgeUpdateTickProcedure {
 			}
 			world.scheduleTick(new BlockPos(x, y, z), world.getBlockState(new BlockPos(x, y, z)).getBlock(), (int) LocalTickRate);
 		}
+		return true;
 	}
 }

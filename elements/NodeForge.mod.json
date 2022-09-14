@@ -108,9 +108,6 @@
     "particleSpawningShape": "Spread",
     "particleSpawningRadious": 0.5,
     "particleAmount": 4,
-    "placingCondition": {
-      "name": "NodeBaseBlockValidPlacementCondition"
-    },
     "hasInventory": true,
     "guiBoundTo": "<NONE>",
     "openGUIOnRightClick": false,
@@ -170,6 +167,15 @@
       },
       {
         "value": "Blocks.ROOTED_DIRT"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.VOID_AIR"
+      },
+      {
+        "value": "Blocks.CAVE_AIR"
       }
     ],
     "generationShape": "UNIFORM",

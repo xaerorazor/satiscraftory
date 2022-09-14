@@ -7,6 +7,7 @@ package net.satiscraftory.init;
 import net.satiscraftory.world.features.ores.NodeForgeFeature;
 import net.satiscraftory.world.features.ores.NodeBaseFeature;
 import net.satiscraftory.world.features.lakes.VAFeature;
+import net.satiscraftory.world.features.NodeStructureFeature;
 import net.satiscraftory.SatiscraftoryMod;
 
 import net.minecraftforge.registries.RegistryObject;
@@ -37,6 +38,8 @@ public class SatiscraftoryModFeatures {
 			new FeatureRegistration(GenerationStep.Decoration.UNDERGROUND_ORES, NodeForgeFeature.GENERATE_BIOMES, NodeForgeFeature::placedFeature));
 	public static final RegistryObject<Feature<?>> VA = register("va", VAFeature::feature,
 			new FeatureRegistration(GenerationStep.Decoration.LAKES, VAFeature.GENERATE_BIOMES, VAFeature::placedFeature));
+	public static final RegistryObject<Feature<?>> NODE_STRUCTURE = register("node_structure", NodeStructureFeature::feature, new FeatureRegistration(
+			GenerationStep.Decoration.SURFACE_STRUCTURES, NodeStructureFeature.GENERATE_BIOMES, NodeStructureFeature::placedFeature));
 
 	private static RegistryObject<Feature<?>> register(String registryname, Supplier<Feature<?>> feature, FeatureRegistration featureRegistration) {
 		FEATURE_REGISTRATIONS.add(featureRegistration);

@@ -257,6 +257,7 @@
       "locked_code": false,
       "registry_name": "node_forge_update_tick",
       "metadata": {
+        "return_type": "logic",
         "dependencies": [
           {
             "name": "x",
@@ -1142,6 +1143,53 @@
         ]
       },
       "path": "~/Tools"
+    },
+    {
+      "name": "NodeStructureOnStructureInstanceGenerated",
+      "type": "procedure",
+      "sortid": 67,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "node_structure_on_structure_instance_generated",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Nodes"
+    },
+    {
+      "name": "NodeStructure",
+      "type": "structure",
+      "sortid": 67,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "node_structure",
+      "path": "~/Nodes"
+    },
+    {
+      "name": "Miner1",
+      "type": "recipe",
+      "sortid": 68,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "miner_1",
+      "path": "~/Miner"
     }
   ],
   "variable_elements": [
